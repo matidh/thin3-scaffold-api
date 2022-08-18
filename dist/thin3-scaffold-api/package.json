@@ -1,0 +1,31 @@
+{
+  "name": "thin3-scaffold-api",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^13.0.0",
+    "@angular/core": "^13.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "module": "fesm2015/thin3-scaffold-api.mjs",
+  "es2020": "fesm2020/thin3-scaffold-api.mjs",
+  "esm2020": "esm2020/thin3-scaffold-api.mjs",
+  "fesm2020": "fesm2020/thin3-scaffold-api.mjs",
+  "fesm2015": "fesm2015/thin3-scaffold-api.mjs",
+  "typings": "thin3-scaffold-api.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./thin3-scaffold-api.d.ts",
+      "esm2020": "./esm2020/thin3-scaffold-api.mjs",
+      "es2020": "./fesm2020/thin3-scaffold-api.mjs",
+      "es2015": "./fesm2015/thin3-scaffold-api.mjs",
+      "node": "./fesm2015/thin3-scaffold-api.mjs",
+      "default": "./fesm2020/thin3-scaffold-api.mjs"
+    }
+  },
+  "sideEffects": false
+}

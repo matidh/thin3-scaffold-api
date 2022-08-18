@@ -1,0 +1,51 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "thin3-scaffold-api": {
+      "projectType": "library",
+      "root": "projects/thin3-scaffold-api",
+      "sourceRoot": "projects/thin3-scaffold-api/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/thin3-scaffold-api/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/thin3-scaffold-api/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/thin3-scaffold-api/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/thin3-scaffold-api/src/test.ts",
+            "tsConfig": "projects/thin3-scaffold-api/tsconfig.spec.json",
+            "karmaConfig": "projects/thin3-scaffold-api/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/thin3-scaffold-api/**/*.ts",
+              "projects/thin3-scaffold-api/**/*.html"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "thin3-scaffold-api",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
+}
